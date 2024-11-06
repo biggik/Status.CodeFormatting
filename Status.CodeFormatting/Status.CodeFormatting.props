@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CA1014</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFilesToCopy Include="$(MSBuildThisFileDirectory)../content/Rules/.editorconfig" />
+  </ItemGroup>
+
+  <Target Name="CopyEditorConfig" BeforeTargets="BeforeBuild">
+    <Message Text="Copying the .editorconfig file from '@(EditorConfigFilesToCopy)' to '$(SolutionFolder)'"></Message>
+    <Copy
+		  SourceFiles="@(EditorConfigFilesToCopy)"
+		  DestinationFolder="$(SolutionDir)"
+		  SkipUnchangedFiles="true"
+		  UseHardlinksIfPossible="false" />
+  </Target>
+</Project>
