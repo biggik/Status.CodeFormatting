@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Files/">
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="publish.bat" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Status.CodeFormatting/Status.CodeFormatting.csproj" />
+</Solution>
