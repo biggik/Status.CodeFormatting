@@ -28,6 +28,9 @@ dotnet_diagnostic.IDE0005.severity = warning
 # IDE0082: Sort usings
 dotnet_diagnostic.IDE0082.severity = warning
 
+# IDE0160: File-scoped namespaces
+dotnet_diagnostic.IDE0160.severity = warning
+
 #### Core EditorConfig Options ####
 
 # Indentation and spacing
